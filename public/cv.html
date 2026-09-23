@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currículum — Alexis Juvencio Gómez Yoza</title>
+    <meta
+      name="description"
+      content="Currículum de Alexis Juvencio Gómez Yoza, Ingeniero de Software Senior | Full-Stack Engineer."
+    />
+    <style>
+      :root {
+        --cyan: #06b6d4;
+        --cyan-dark: #0e7490;
+        --ink: #0f172a;
+        --muted: #475569;
+        --line: #e2e8f0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #f1f5f9;
+        color: var(--ink);
+        font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, Roboto, Helvetica, Arial,
+          sans-serif;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .toolbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 20px;
+        background: #0f172a;
+        color: #e2e8f0;
+      }
+
+      .toolbar strong {
+        font-size: 14px;
+        letter-spacing: 0.04em;
+      }
+
+      .toolbar .actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 0;
+        border-radius: 10px;
+        padding: 10px 16px;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+        text-decoration: none;
+        transition: transform 0.2s ease, background 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        background: var(--cyan);
+        color: #0f172a;
+      }
+
+      .btn-ghost {
+        background: rgba(255, 255, 255, 0.06);
+        color: #e2e8f0;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+      }
+
+      .page {
+        max-width: 940px;
+        margin: 28px auto 60px;
+        background: #fff;
+        padding: 46px 52px;
+        border-radius: 16px;
+        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+      }
+
+      header.cv-head {
+        border-bottom: 3px solid var(--cyan);
+        padding-bottom: 20px;
+      }
+
+      .top {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 34px;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+      }
+
+      .role {
+        margin: 8px 0 0;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--cyan-dark);
+      }
+
+      .photo {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--cyan);
+        background: #e2e8f0;
+      }
+
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 18px;
+        margin-top: 16px;
+        font-size: 13.5px;
+        color: var(--muted);
+      }
+
+      .contact a {
+        color: var(--cyan-dark);
+        text-decoration: none;
+      }
+
+      .contact span {
+        white-space: nowrap;
+      }
+
+      section {
+        margin-top: 28px;
+      }
+
+      h2 {
+        margin: 0 0 14px;
+        font-size: 13px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--cyan-dark);
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 8px;
+      }
+
+      p.summary {
+        margin: 0;
+        font-size: 14.5px;
+        color: #334155;
+      }
+
+      .job {
+        margin-bottom: 20px;
+      }
+
+      .job-head {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 14px;
+        align-items: baseline;
+        justify-content: space-between;
+      }
+
+      .job-head h3 {
+        margin: 0;
+        font-size: 16.5px;
+      }
+
+      .job-head h3 span {
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .period {
+        font-size: 12.5px;
+        font-weight: 700;
+        color: var(--cyan-dark);
+        background: #ecfeff;
+        border: 1px solid #a5f3fc;
+        border-radius: 999px;
+        padding: 3px 12px;
+        white-space: nowrap;
+      }
+
+      ul {
+        margin: 10px 0 0;
+        padding-left: 18px;
+      }
+
+      li {
+        font-size: 14px;
+        color: #334155;
+        margin-bottom: 6px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 14px 16px;
+      }
+
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 12px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--cyan-dark);
+      }
+
+      .pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .pill {
+        font-size: 12.5px;
+        background: #f8fafc;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 4px 10px;
+        color: #1e293b;
+      }
+
+      .langs {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        font-size: 14px;
+      }
+
+      .langs strong {
+        color: var(--cyan-dark);
+      }
+
+      footer.cv-foot {
+        margin-top: 30px;
+        padding-top: 14px;
+        border-top: 1px solid var(--line);
+        font-size: 12.5px;
+        color: #94a3b8;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 720px) {
+        .page {
+          margin: 0;
+          padding: 28px 20px;
+          border-radius: 0;
+        }
+
+        h1 {
+          font-size: 27px;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .toolbar {
+          display: none;
+        }
+
+        .page {
+          margin: 0;
+          max-width: none;
+          padding: 0;
+          box-shadow: none;
+          border-radius: 0;
+        }
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        .job,
+        section,
+        .card {
+          break-inside: avoid;
+        }
+
+        @page {
+          size: A4;
+          margin: 14mm;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <strong>CURRÍCULUM · ALEXIS JUVENCIO GÓMEZ YOZA</strong>
+      <div class="actions">
+        <a class="btn btn-ghost" href="index.html">← Volver a la web</a>
+        <button class="btn btn-primary" type="button" onclick="window.print()">
+          Guardar como PDF / Imprimir
+        </button>
+      </div>
+    </div>
+
+    <main class="page">
+      <header class="cv-head">
+        <div class="top">
+          <div>
+            <h1>Alexis Juvencio Gómez Yoza</h1>
+            <p class="role">Ingeniero de Software Senior · Full-Stack Engineer</p>
+          </div>
+          <img class="photo" src="perfil.jpg" alt="Alexis Juvencio Gómez Yoza" />
+        </div>
+
+        <div class="contact">
+          <span>📍 Quito, Ecuador</span>
+          <span>☎ <a href="tel:+593989985359">0989985359</a></span>
+          <span>✉ <a href="mailto:agy_17septiembre@hotmail.com">agy_17septiembre@hotmail.com</a></span>
+          <span>
+            🔗
+            <a href="https://www.linkedin.com/in/alexis-gomez-yoza" target="_blank" rel="noopener">
+              www.linkedin.com/in/alexis-gomez-yoza
+            </a>
+          </span>
+        </div>
+      </header>
+
+      <section>
+        <h2>Perfil profesional</h2>
+        <p class="summary">
+          Ingeniero de Software Senior con más de 4 años de trayectoria en el desarrollo, optimización
+          y evolución de sistemas empresariales de alto impacto en los sectores de Retail y Gestión
+          Pública. Especializado en desarrollo Full-Stack, arquitecturas de microservicios, APIs,
+          bases de datos SQL y automatización de procesos, utilizando Java, Node.js, React y Angular.
+          Experiencia en entornos cloud, CI/CD, DevOps y herramientas de IA para acelerar el ciclo de
+          desarrollo. Orientado a resultados, escalabilidad, calidad y mejora continua.
+        </p>
+      </section>
+
+      <section>
+        <h2>Experiencia profesional</h2>
+
+        <div class="job">
+          <div class="job-head">
+            <h3>Shopping Management Operadora <span>· Especialista en TI</span></h3>
+            <span class="period">Octubre 2023 – Presente</span>
+          </div>
+          <ul>
+            <li>
+              Lideré el diseño y despliegue de aplicaciones empresariales integrando Java y Node.js
+              en backend con React y Angular en frontend, automatizando procesos clave y elevando la
+              eficiencia operativa en un 25%.
+            </li>
+            <li>
+              Implementé arquitecturas de APIs y centralización de flujos de datos críticos mediante
+              el uso estratégico de Antigravity Code Codex, reduciendo en un 30% los ciclos de
+              entrega de software mediante la automatización de entornos de desarrollo.
+            </li>
+            <li>
+              Ejecuté el modelado y optimización avanzada de bases de datos SQL para operaciones
+              masivas, contribuyendo a una disponibilidad del sistema del 99,9% y a una alta
+              integridad de datos en módulos financieros.
+            </li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <h3>Bitekso <span>· Ingeniero de Software II</span></h3>
+            <span class="period">Enero 2022 – Octubre 2023</span>
+          </div>
+          <ul>
+            <li>
+              Participé en la reingeniería de soluciones críticas para la gestión de trámites del
+              Municipio de Guayaquil, escalando la capacidad de procesamiento de solicitudes en un
+              40% mediante microservicios eficientes.
+            </li>
+            <li>
+              Reestructuré procedimientos almacenados y ejecuté migraciones de datos complejas,
+              disminuyendo en un 35% los tiempos de respuesta del sistema y mejorando la experiencia
+              del usuario final.
+            </li>
+            <li>
+              Establecí flujos de trabajo bajo Scrum, control de versiones con Git e integración de
+              prácticas CI/CD, reduciendo en un 15% los fallos de despliegue a producción.
+            </li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <h3>Golden Companies <span>· Desarrollador de Software y QA</span></h3>
+            <span class="period">Enero 2021 – Enero 2022</span>
+          </div>
+          <ul>
+            <li>
+              Diseñé y ejecuté un marco de pruebas automatizadas que elevó la cobertura de testing al
+              85% y redujo en un 20% la detección de errores críticos posteriores al lanzamiento.
+            </li>
+            <li>
+              Desarrollé tableros interactivos en Power BI y Tableau integrados con bases de datos
+              operativas, proporcionando métricas para apoyar la toma de decisiones gerenciales y
+              mejorarla en un 18%.
+            </li>
+            <li>
+              Optimicé consultas SQL complejas, mejorando en un 50% la velocidad de procesamiento de
+              reportes analíticos y extendiendo el rendimiento de la infraestructura de bases de
+              datos.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Habilidades y tecnologías</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Especialidades</h3>
+            <div class="pills">
+              <span class="pill">Arquitectura de Microservicios</span>
+              <span class="pill">Desarrollo Full-Stack</span>
+              <span class="pill">APIs</span>
+              <span class="pill">Optimización de Bases de Datos</span>
+              <span class="pill">Scrum</span>
+              <span class="pill">Kanban</span>
+              <span class="pill">CI/CD</span>
+              <span class="pill">DevOps</span>
+              <span class="pill">Análisis de Datos</span>
+              <span class="pill">BI</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Lenguajes</h3>
+            <div class="pills">
+              <span class="pill">Java</span>
+              <span class="pill">Python</span>
+              <span class="pill">JavaScript</span>
+              <span class="pill">TypeScript</span>
+              <span class="pill">SQL</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Frameworks / Backend</h3>
+            <div class="pills">
+              <span class="pill">React</span>
+              <span class="pill">Angular</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">Spring Boot</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Datos / Cloud / DevOps</h3>
+            <div class="pills">
+              <span class="pill">PostgreSQL</span>
+              <span class="pill">MySQL</span>
+              <span class="pill">Oracle</span>
+              <span class="pill">Docker</span>
+              <span class="pill">AWS</span>
+              <span class="pill">Kubernetes</span>
+              <span class="pill">Git</span>
+              <span class="pill">Antigravity Code Codex</span>
+              <span class="pill">Anthropic Claude Code</span>
+              <span class="pill">Power BI</span>
+              <span class="pill">Tableau</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Idiomas</h2>
+        <div class="langs">
+          <div><strong>Español:</strong> Nativo</div>
+          <div><strong>Inglés:</strong> Profesional</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Educación</h2>
+        <div class="job">
+          <div class="job-head">
+            <h3>Universidad Central del Ecuador <span>· Ingeniería en Informática</span></h3>
+            <span class="period">2023</span>
+          </div>
+          <p class="summary" style="margin-top: 6px; font-size: 13.5px">Quito, Ecuador</p>
+        </div>
+      </section>
+
+      <footer class="cv-foot">
+        <span>Alexis Juvencio Gómez Yoza · Quito, Ecuador</span>
+        <span>Ingeniero de Software Senior | Full-Stack Engineer</span>
+      </footer>
+    </main>
+  </body>
+</html>
